@@ -26,8 +26,8 @@ public class Curso {
     public double[] getNotas(){
         return notas;
     }
-     int numAlunos = 10;
-    double[] notasAlunos = new double[10];
+    int numAlunos = 10;
+    double[] notasAlunos = new double[numAlunos];
     
     public void notasAl(){
       for (int x=0;x<numAlunos;++x){
@@ -35,12 +35,22 @@ public class Curso {
             notasAlunos[x] = ler.nextDouble();   
     }
       }
-    double total = notasAlunos[0]+notasAlunos[1]+notasAlunos[2]+notasAlunos[3]+notasAlunos[4]+notasAlunos[5]+notasAlunos[6]+notasAlunos[7]+
-            notasAlunos[8]+notasAlunos[9]+notasAlunos[10];
- 
     public void mediaTurma(){
-           double media = total/numAlunos;
-            System.out.println("A media da turma foi"+media);
-            
+           double soma = 0;
+           for (int x=0;x<numAlunos;++x){
+               soma = soma+notasAlunos[x];
+               double media = soma/numAlunos;
+               System.out.println("A media da turma foi de "+media);
+           }
         }
+    public void maiorNota(){
+        double maior = 0;
+        for (int i=0;i<notasAlunos.length;++i){
+            if (notasAlunos[i]>maior){
+                maior = notasAlunos[i];
+                System.out.println("A maior nota foi de "+maior);           
+        }
+        
     }
+    }
+}
