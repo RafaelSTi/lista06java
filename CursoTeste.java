@@ -8,6 +8,7 @@ public class CursoTeste {
         
        c1.notasAl();
        c1.mediaTurma();
+       c1.maiorNota();
     }
     
 }
